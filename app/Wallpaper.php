@@ -22,11 +22,11 @@ class Wallpaper extends Model
       ]
     ]
   }
-  protected $fillable = ['reddit_id', 'title', 'source', 'domain', 'width', 'height', 'score', 'thumb', 'url', 'permalink'];
+  protected $fillable = ['title', 'source', 'resolution', 'thumbnail_url', 'image_url', 'purity', 'size', 'views', 'upload_date]';
 
   public static function getWH(){
     $wh = new WallHaven();
-    $wallpapers = $wh->filter()->keywords('landscape')->getWallpapers();
+    $wallpapers = $wh->filter()->keywords('landscape')->->categories(Category::GENERAL)->getWallpapers();
     foreach($wallpapers as $w){
       echo $w->getResolution() . PHP_EOL;
     }

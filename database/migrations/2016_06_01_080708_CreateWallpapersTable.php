@@ -27,7 +27,7 @@ class CreateWallpapersTable extends Migration
         });
         // title, source, resolution, thumbnail_url, image_url, purity, size, views, upload_date
     }
-// http://i.imgur.com/ECR2Pzb.jpg
+
 
     /**
      * Reverse the migrations.
